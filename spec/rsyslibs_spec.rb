@@ -5,7 +5,7 @@ RSpec.describe Rsyslibs do
     expect(Rsyslibs::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'has a valid version number' do
+    expect(Rsyslibs::VERSION).to match(/\d+\.\d+\.\d+/)
   end
 end
