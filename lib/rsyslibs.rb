@@ -23,12 +23,16 @@ module Rsyslibs
         res = JSON.parse(system_dependencies)
         return 'No libraries found.' if res.empty?
 
-        puts "#{res.size} system libraries need to be installed..."
+        puts "#{res.size} system libraries found..."
         puts ''
         res.each_with_index do |lib, index|
           project_dependencies = lib['project_dependencies'].collect { |v| v['name'] }.join(', ')
           puts "#{index + 1}- #{lib['name']} for gems (#{project_dependencies}) on operating system #{lib['os']}."
         end
+        puts ''
+        puts "Run 'sudo apt-get install LIBRARY NAME' to install on Ubuntu and Debian-based distros."
+        puts "Run 'sudo brew install LIBRARY NAME' to install on macOS."
+        res
       end
 
       private
