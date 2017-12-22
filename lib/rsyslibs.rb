@@ -1,5 +1,4 @@
 require 'rsyslibs/version'
-require 'rsyslibs/request'
 require 'rsyslibs/operating_system_info'
 require 'rsyslibs/request'
 require 'bundler'
