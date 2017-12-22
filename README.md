@@ -46,6 +46,12 @@ or
 Rsyslibs::Dependencies.print_friendly_syslibs
 ```
 
+To fetch all required system-level libraries and **install them**:
+
+```ruby
+$ rsyslibs install_syslibs
+```
+
 
 ## Development
 

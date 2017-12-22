@@ -12,5 +12,13 @@ module Rsyslibs
         ruby_platform: os_report['RUBY_PLATFORM']
       }
     end
+
+    def self.os_name
+      return 'MacOS' if OS.mac?
+
+      return 'Linux' if OS.linux?
+
+      'Unknown OS'
+    end
   end
 end
