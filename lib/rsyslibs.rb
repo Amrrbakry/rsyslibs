@@ -20,19 +20,31 @@ module Rsyslibs
       end
 
       def print_friendly_syslibs
-        res = JSON.parse(system_dependencies)
-        return 'No libraries found.' if res.empty?
+        syslibs = JSON.parse(system_dependencies)
+        return 'No libraries found.' if syslibs.empty?
 
-        puts "#{res.size} system libraries found..."
+        puts "#{syslibs.size} system libraries found..."
         puts ''
-        res.each_with_index do |lib, index|
+        syslibs.each_with_index do |lib, index|
           project_dependencies = lib['project_dependencies'].collect { |v| v['name'] }.join(', ')
           puts "#{index + 1}- #{lib['name']} for gems (#{project_dependencies}) on operating system #{lib['os']}."
         end
         puts ''
         puts "Run 'sudo apt-get install LIBRARY NAME' to install on Ubuntu and Debian-based distros."
-        puts "Run 'sudo brew install LIBRARY NAME' to install on macOS."
-        res
+        puts "Run 'brew install LIBRARY NAME' to install on macOS."
+        syslibs
+      end
+
+      def install_syslibs
+        syslibs = JSON.parse(system_dependencies)
+        return 'No libraries found.' if syslibs.empty?
+
+        os_name = Rsyslibs::OperatingSystemInfo.os_name
+        case os_name
+        when 'MacOS' then syslibs.each { |lib| `brew install #{lib['name']}` }
+        when 'Linux' then syslibs.each { |lib| `apt-get install #{lib['name']}` }
+        else "I don't know how to install these libraries on this operating system :("
+        end
       end
 
       private
