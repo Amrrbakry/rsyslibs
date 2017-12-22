@@ -22,7 +22,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To look up the system-level libraries you need for your project dependencies, simpley run:
+
+`$ rsyslibs system_dependencies`
+
+or use:
+
+`Rsyslibs::Dependencies.system_dependencies`
+
+To get a formatted human-readable output from the API, run:
+
+`$ rsyslibs print_friendly_syslibs`
+
+or
+
+`Rsyslibs::Dependencies.print_friendly_syslibs`
 
 ## Development
 
