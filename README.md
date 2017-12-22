@@ -13,8 +13,7 @@ For example, when you want to install a Ruby gem such as ‘nokogiri’, and if 
 upfront, you will be hit with an exception about a missing system library. Only when you check
 Nokogiri’s website, you will find out that you need to install ‘zlib1g-dev’ and ‘liblzma-dev’.
 
-**Rsyslibs** collects all gems in your project and sends them to a database-driven RESTful API
-which looks up and returns the system-level libraries required to install your local gems.
+**Rsyslibs** collects all gems in your project along with operating system info and sends them to a database-driven RESTful API which looks up and returns the system-level libraries required to install your local gems.
 
 *contribute to the API [here](https://github.com/Amrrbakry/rsyslibs_api).*
 
