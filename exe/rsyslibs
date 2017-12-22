@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'rsyslibs/cli'
+Rsyslibs::CLI.start
