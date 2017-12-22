@@ -25,7 +25,7 @@ Or install it yourself as:
 To look up the system-level libraries you need for your project dependencies, simpley run:
 
 ```ruby
-$ rsyslibs system_dependencies`
+$ rsyslibs system_dependencies
 ```
 
 
