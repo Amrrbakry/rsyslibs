@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rsyslibs (0.1.0)
+    rsyslibs (0.2.0)
       os (~> 1.0)
       rest-client (~> 2.0, >= 2.0.2)
       thor (~> 0.20.0)
