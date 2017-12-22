@@ -2,6 +2,22 @@
 
 A simple ruby library to determine the required system-level packages for your project dependencies.
 
+## Overview
+
+The Ruby Gem package manager ‘bundler’ and NodeJS ‘npm’ are excellent tools to install
+project-specific dependencies.
+However, they both share a major flaw, the ability to determine system-level packages required
+to build native extensions.
+
+For example, when you want to install a Ruby gem such as ‘nokogiri’, and if you don’t know
+upfront, you will be hit with an exception about a missing system library. Only when you check
+Nokogiri’s website, you will find out that you need to install ‘zlib1g-dev’ and ‘liblzma-dev’.
+
+**Rsyslibs** collects all gems in your project and sends them to a database-driven RESTful API
+which looks up and returns the system-level libraries required to install your local gems.
+
+*contribute to the API [here](https://github.com/Amrrbakry/rsyslibs_api).*
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -44,6 +60,12 @@ or
 
 ```ruby
 Rsyslibs::Dependencies.print_friendly_syslibs
+```
+
+To fetch all required system-level libraries and **install them**:
+
+```ruby
+$ rsyslibs install_syslibs # MacOS and Linux only
 ```
 
 
