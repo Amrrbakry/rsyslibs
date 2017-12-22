@@ -24,19 +24,30 @@ Or install it yourself as:
 
 To look up the system-level libraries you need for your project dependencies, simpley run:
 
-`$ rsyslibs system_dependencies`
+```ruby
+$ rsyslibs system_dependencies`
+```
+
 
 or use:
 
-`Rsyslibs::Dependencies.system_dependencies`
+```ruby
+Rsyslibs::Dependencies.system_dependencies
+```
+
 
 To get a formatted human-readable output from the API, run:
 
-`$ rsyslibs print_friendly_syslibs`
+```ruby
+$ rsyslibs print_friendly_syslibs
+```
 
 or
 
-`Rsyslibs::Dependencies.print_friendly_syslibs`
+```ruby
+Rsyslibs::Dependencies.print_friendly_syslibs
+```
+
 
 ## Development
 
