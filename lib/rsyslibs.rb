@@ -53,7 +53,7 @@ module Rsyslibs
         if response.code == 200
           response.body
         else
-          'Request failed. Please try again.'
+          'Failed to fetch system libraries from remote server. Please try again.'
         end
       end
 
