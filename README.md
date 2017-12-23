@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ant-design/ant-design.svg?branch=master)](https://travis-ci.org/ant-design/ant-design)
 # Rsyslibs
 
 A simple ruby library to determine the required system-level packages for your project dependencies.
