@@ -13,10 +13,8 @@ def success_syslibs
             { 'id' => 6, 'name' => 'libmysql-ruby', 'version' => nil, 'os' => 'darwin16',
               'os_bits' => 64, 'os_vendor' => 'apple',
               'project_dependencies' => [{ 'id' => 4, 'name' => 'mysql2', 'version' => '0.4.10',
-              'github_url' => 'https://github.com/brianmario/mysql2', 'website' => nil, 'owner_name' => nil }]
-            }
-          ]
-        )
+                                           'github_url' => 'https://github.com/brianmario/mysql2', 'website' => nil, 'owner_name' => nil }] }
+          ])
 end
 
 def failure_syslibs
